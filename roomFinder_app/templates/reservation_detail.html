@@ -1,0 +1,23 @@
+{% load auth_extras %}
+{% include 'sidebar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="content">
+        <h1>Title: {{ reservation.title }}</h1>
+        <hr>
+        <p>Room: {{ reservation.room }}</p>
+        <p>Day: {{ reservation.day }}</p>
+        <p>Start Time: {{ reservation.start_time }}</p>
+        <p>End Time: {{ reservation.end_time }}</p>
+        {% if request.user|has_group:"admin" %}
+            <p>User: {{ reservation.user }}</p>
+        {% endif %}
+        <a href="{% url 'roomFinder_app:delete_reservation' reservation.id %}" class="btn btn-outline-primary">Delete</a>
+        <a href="{% url 'roomFinder_app:reservation_list'%}" class="btn btn-outline-primary">Back to Reservations</a>
+    </div>
+</form>
+</body>
+</html>

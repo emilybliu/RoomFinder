@@ -1,0 +1,19 @@
+{% load auth_extras %}
+{% include 'sidebar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="content">
+        <h1>Room: {{ room.room_name }}</h1>
+        <hr>
+        <p>Location: {{ room.building }}</p>
+        {% if request.user|has_group:"admin" %}
+            <a href="{% url 'roomFinder_app:approve_room' room.id %}" class="btn btn-outline-primary">Approve</a>
+            <a href="{% url 'roomFinder_app:delete_room' room.id %}" class="btn btn-outline-primary">Delete</a>
+            <a href="{% url 'roomFinder_app:unapproved_rooms'%}" class="btn btn-outline-primary">Back</a>
+        {% endif %}
+    </div>
+</body>
+</html>
