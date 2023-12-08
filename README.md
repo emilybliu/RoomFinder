@@ -1,5 +1,7 @@
 # RoomFinder
 
+Web application group project for Advanced Software Developement Techniques at UVA
+
 #### Authors: 
 Ahyush Kaul, Emily Liu, Celestine Nguyen, Jack Nickerson, and Strom Norcross
 
