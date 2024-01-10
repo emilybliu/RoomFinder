@@ -19,3 +19,5 @@ Bootstrap, and Google Maps API.
 
 Currently, RoomFinder is hosted on Heroku. To view the website click here: https://room-finder1-70d4c0df9a64.herokuapp.com/
 
+To run on your local machine, download this repository, install necessary packages in requirements.txt, and run python manage.py runserver
+
